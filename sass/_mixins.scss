@@ -1,6 +1,7 @@
-@mixin dboton(){
+@mixin dbotoncalif($colorbutton){
     font-size: 20px;
-    background-color: yellow;
+    background-color:$colorbutton;
     border-radius: 10px;
     padding: 1rem;
+    color: black;
 }
