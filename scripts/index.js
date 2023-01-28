@@ -20,7 +20,7 @@ if(edad>17) { alert("Proceda porfavor")
 
 console.log= (nombre + visita + existe + duda + nada);
 
-/*---------------------Actividad6*/
+/*---------------------Actividad6-------------------------*/
 
 function Sumatoria (){
     let resultado = 4+5+6
@@ -38,21 +38,25 @@ const ArrowSumatoria = () => console.log(4+5+63);
 
 const ArrowComparacion = () => console.log(6>7);
 
-
-const Computadora = {
+const computadora = {
     gabinete: "Corsair",
     procesador: "AMD 2600",
     tarjetagrafica: "Nvidia 3060Ti",
     memoriaRAM: "16 GB DDR4",
     Almacenamiento: "SSD 1Tb",
     Fuentedepoder: "750W Evga Gold",
+    compro (){
+        console.log("Metodo listo")
+    }
 }
 
-InventarioTienda.push(Computadora);
+console.log(computadora.compro());
 
-const {gabinete, procesador, tarjetagrafica} = Computadora;
+console.log(computadora.gabinete);
 
-console.log(gabinete, procesador, tarjetagrafica);
+console.log(computadora.procesador);
+
+console.log(computadora.tarjetagrafica);
 
 
 const Arreglo = ["Hola, tu pedido con numero", 4728, "se encuentra en camino, que incluye", pedido={componentes: "Tarjeta grafica 3060Ti de 6GB", precio: 20000}, despedida= ["Gracias por su preferencia", "Que tenga un excelente dia"]];
