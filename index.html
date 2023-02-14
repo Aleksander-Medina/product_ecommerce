@@ -1,52 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display</title>
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<link rel="stylesheet" href="./estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
-<header>
-    <div>
-        <img class="ban1" src="./images/Logo.png" alt="logo">
-    </div>
-    <div>
-        <img class="ban2" src="./images/Fondo.jpg" alt="banner">
-    </div>
-    <div class="busq">
-        <input type="text" placeholder="Busqueda...">
-    </div>
-    <nav>
-        <ul class="nav_item">
-            <li>
-                <a href="./index.html">Inicio</a>
-            </li>
-            <li>
-                <a href="./gabinetes.html">Gabinetes</a>
-            </li>
-            <li>
-                <a href="./procesadores.html">Procesadores</a>
-            </li>
-            <li>
-                <a href="./tarjetasdevideo.html">Tarjetas de Video</a>
+    <header>
+        <div>
+            <div>
+                <table>
+                    <tr>
+                        <th>
+                            <img class="LogoAltek" src="./images/Altekw.png" alt="logo">
+                        </th>
+                        <th>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="./index.html">Inicio</a>
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                        </svg>
+                                        <a href="">Mi cuenta</a>
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                        </svg>
+                                        <a href="">Carrito</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                        </svg>
+                                    </li>
+                                </ul>
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <ul nav class="nav navbar navbar-dark bg-dark justify-content-center">
+            <li class="container-fluid">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="./gabinetes.html">Gabinetes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="./procesadores.html">Procesadores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand space" href="./tarjetasdevideo.html">Tarjetas de Video</a>
+                </li>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar Productos..." aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
             </li>
         </ul>
-    </nav>
-</header>
-<main>
-    <section>
-        <h2 class="titulh2">Noticias</h2>
+    </header>
+    <main>
+        <div class="container text-center">
+            <div class="row row-cols-4">
+                <div id="carouselExampleAutoplaying" class="carousel slide col-md-8" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./images/3060Ti1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/3060Ti2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/3060Ti3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div id="carouselExampleIndicators2" class="carousel slide col-6 col-md-4" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="8000">
+                            <img src="images/IvsA1.jpg" class="d-block w-100" alt="..." width="300px" height="450px">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="8000">
+                            <img src="images/IvsA2.jpg" class="d-block w-100" alt="..." width="300px" height="450px">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div> 
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-6 formatoHorizontal">
+                    <img src="images/BannerPago.jpg" alt="" width="700px" height="150px">
+                </div>
+                <div class="col-6">
+                    <img src="images/BannerPago2.jpg" alt="" width="650px" height="150px">
+                </div>
+            </div>
+        </div>
+        <section>
+            <h2 class="titulh2">Noticias</h2>
             <div class="video">
                 <iframe class="paraVideo" width="1280" height="720" src="https://www.youtube.com/embed/rg6hZ24xJcY" title="NVIDIA GeForce RTX 4090 Founders Edition_Unboxing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-    </section>
-    <section>
-        <h2 class="titulh2">Alerta</h2>
-        <h3>Deberas tener en cuenta que nuestros dispositivos podrian retrasarse en su tiempo estimado de entrega por las siguientes condiciones:</h3>
+        </section>
+        <section>
+            <h2 class="titulh2">Recomendaciones</h2>
+            <div class="formulario">
+            <h3>Deberas tener en cuenta que nuestros dispositivos podrian retrasarse en su tiempo estimado de entrega
+                por las siguientes condiciones:</h3>
             <div class="alert">
                 <ol>
                     <li>
@@ -60,130 +154,186 @@
                     </li>
                 </ol>
             </div>
-    </section>
-    <section>
-        <h2 class="titulh2">Sugerencias</h2>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col imgmostra">
-                    <img src="https://dimercom.mx/wp-content/uploads/2021/02/Captura-de-Pantalla-2021-02-16-a-las-7.02.30-p.m..png.webp" alt="Microfono_elgato">
-                </div>
-                <div class="col">
-                    <img src="https://dimercom.mx/wp-content/uploads/2022/10/Captura-de-Pantalla-2022-10-14-a-las-6.13.00-p.m.-380x434.png.webp" alt="Kingston_NV2_500gb">
-                </div>
-                <div class="col">
-                    <img src="https://dimercom.mx/wp-content/uploads/2021/09/Captura-de-Pantalla-2022-01-05-a-las-2.21.41-p.m.-380x434.png.webp" alt="Gabinete_ADATAXPGDEFENDERPRO">
-                </div>
-            <div class="row">
-                <div class="col">
-                    <p>Microfono</p>
-                </div>
-                <div class="col">
-                    <p>Kingstone</p>
-                </div>
-                <div class="col">
-                    <p>Gabinete</p>
-                </div>
-            </div>
         </div>
-    </section>
-    <section>
-        <h2 class="titulh2">Consejos y Recomendaciones</h2>
-        <div  class="alert2">
-            <div>
-                <p>Elegir una computadora que cumpla todas las funciones que uno necesita, sin gastar de más. Los nuevos modelos   son siempre muy atractivos, pero en muchos casos un modelo no tan nuevo puede cumplir las funciones necesarias y costar bastante menos.</p>
+        </section>
+        <section>
+            <h2 class="titulh2">Sugerencias</h2>
+            <div class="formulario">
+            <p>colocar cosas importantes</p>
+        </div>
+        </section>
+        <section>
+            <h2 class="titulh2">Consejos y Recomendaciones</h2>
+            <div class="formulario">
+            <div class="alert2">
+                <div>
+                    <p>Elegir una computadora que cumpla todas las funciones que uno necesita, sin gastar de más. Los
+                        nuevos modelos son siempre muy atractivos, pero en muchos casos un modelo no tan nuevo puede
+                        cumplir las funciones necesarias y costar bastante menos.</p>
+                </div>
+                <div>
+                    <p>Decidir el tipo de procesador: Elegir procesadores de potencia baja si sólo se van a usar
+                        programas básicos, como procesador de textos. Elegir un procesador de potencia intermedia si se
+                        quiere que se mantenga útil en 2 o 3 años; y uno de los más avanzados para 4 a 6 años y para
+                        usar software multimedia complejo, calidad de video, gráficos, etc.</p>
+                </div>
+                <div>
+                    <p>A la hora de comprar un ordenador, las principales variables a tener en cuenta son las
+                        siguientes: 1.- Procesador. 2.- Disco duro. 3.- Memoria RAM. 4.- Tarjeta gráfica. 5.- Duración
+                        de la batería (en los portátiles). 6.- Peso (en los portátiles). 7.- Tamaño pantalla/Monitor.
+                    </p>
+                </div>
             </div>
-            <div>
-                <p>Decidir el tipo de procesador: Elegir procesadores de potencia baja si sólo se van a usar programas básicos, como procesador de textos. Elegir un procesador de potencia intermedia si se quiere que  se mantenga útil en 2 o 3 años; y uno de los más avanzados para 4 a 6 años y para usar software multimedia complejo, calidad de video, gráficos, etc.</p>
+        </section>
+        <section>
+            <h2 class="titulh2">Contactanos</h2>
+<div class="formulario">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Nombre</span>
+                <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                <span class="input-group-text">Apellidos</span>
+                <input type="text" class="form-control" placeholder="Server" aria-label="Server">
             </div>
-            <div>
-                <p>A la hora de comprar un ordenador, las principales variables a tener en cuenta son las siguientes: 1.- Procesador. 2.- Disco duro. 3.- Memoria RAM. 4.- Tarjeta gráfica. 5.- Duración de la batería (en los portátiles). 6.- Peso (en los portátiles). 7.- Tamaño pantalla/Monitor.</p>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Edad</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <span class="input-group-text">Email</span>
+                <input type="text" class="form-control" placeholder="Server" aria-label="Server">
             </div>
-    </section>
-    <section>
-        <h2 class="titulh2">Contactanos</h2>
-        <form>
+            
+            <label for="basic-url" class="form-label">Your vanity URL</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+            
+            <div class="input-group mb-3">
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text">.00</span>
+            </div>
+            
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+            </div>
+            
+            <div class="input-group">
+                <span class="input-group-text">With textarea</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+
+        </div>
+
+
+            <form>
+                <div class="centr">
+                    <label for="">Nombre</label>
+                    <input type="text" name="" id="">
+                    <label for="">Apellido</label>
+                    <input type="text" name="" id="" required>
+                    <label for="">Edad</label>
+                    <input type="number" name="" id="">
+                    <label for="">Email</label>
+                    <input type="email" name="" id="" placeholder="Agrega tu email">
+                    <label for="">Dirección</label>
+                    <input type="text" name="" id="" placeholder="Agrega tu Dirección">
+                    <textarea name="" id="" cols="30" rows="1" placeholder="Agregue sus comentarios"></textarea>
+                    <input type="reset" value="Limpiar">
+                    <input type="submit" value="Enviar">
+                </div>
+                <h2 class="titulh2">¿Que servicio deseas?</h2>
+                <div class="centr">
+                    <label for="">Servicio personal</label>
+                    <input type="radio" name="Servicio" id="">
+                    <label for="">Servicio telefonico</label>
+                    <input type="radio" name="Servicio" id="">
+                    <label for="">Servicio por correo</label>
+                    <input type="radio" name="Servicio" id="">
+                </div>
+                <h2 class="titulh2">Pagos de preferencia</h2>
+                <div class="centr">
+                    <label for="">Transferencia</label>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Efectivo</label>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Tarjeta Debito/Credito</label>
+                    <input type="checkbox" name="" id="">
+                </div>
+                <h2 class="titulh2">Idioma de Atención</h2>
+                <div class="centr">
+                    <select name="" id="">
+                        <option value="Ingles">Ingles</option>
+                        <option value="Español">Español</option>
+                        <option value="Japones">Japones</option>
+                    </select>
+                </div>
+            </form>
+        </section>
+        <section>
+            <h2 class="titulh2">Ubicanos</h2>
             <div class="centr">
-                <label for="">Nombre</label>
-                <input type="text" name="" id="">
-                <label for="">Apellido</label>
-                <input type="text" name="" id="" required>
-                <label for="">Edad</label>
-                <input type="number" name="" id="">
-                <label for="">Email</label>
-                <input type="email" name="" id="" placeholder="Agrega tu email">
-                <label for="">Dirección</label>
-                <input type="text" name="" id="" placeholder="Agrega tu Dirección">
-                <textarea name="" id="" cols="30" rows="1" placeholder="Agregue sus comentarios"></textarea>
-                <input type="reset" value="Limpiar">
-                <input type="submit" value="Enviar">
-            </div>
-            <h2 class="titulh2">¿Que servicio deseas?</h2>
-            <div class="centr">
-                <label for="">Servicio personal</label>
-                <input type="radio" name="Servicio" id="">
-                <label for="">Servicio telefonico</label>
-                <input type="radio" name="Servicio" id="">
-                <label for="">Servicio por correo</label>
-                <input type="radio" name="Servicio" id="">
-            </div>
-            <h2 class="titulh2">Pagos de preferencia</h2>
-            <div class="centr">
-                <label for="">Transferencia</label>
-                <input type="checkbox" name="" id="">
-                <label for="">Efectivo</label>
-                <input type="checkbox" name="" id="">
-                <label for="">Tarjeta Debito/Credito</label>
-                <input type="checkbox" name="" id="">
-            </div>
-            <h2 class="titulh2">Idioma de Atención</h2>
-            <div class="centr">
-                <select name="" id="">
-                    <option value="Ingles">Ingles</option>
-                    <option value="Español">Español</option>
-                    <option value="Japones">Japones</option>
-                </select>
-            </div>
-        </form>
-    </section>
-    <section>
-        <h2 class="titulh2">Ubicanos</h2>
-        <div class="centr">
-            <div class="uno">
+                <!--div class="uno">
                 <a href="https://www.google.com/search?q=tiendas+ps5&npsic=0&rflfq=1&rldoc=1&rllag=19040198,-98215519,2198&tbm=lcl#rlfi=hd:;si:,18.986366643069438,-98.1414061988687;mv:[[19.110976453783323,-98.08104122723657],[18.9788926655359,-98.33853329266626],null,[19.044947698706434,-98.20978725995141],13]" target="_blank" rel="noopener noreferrer">Encuentra tu tienda aqui</a>
+            </div-->
             </div>
-        </div>
-        <h2 class="titulh2">Oficinas centrales</h2>  
-            <div>
+            <h2 class="titulh2">Oficinas centrales</h2>
+            <!--div>
                 <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.7199723323356!2d-122.28408560000001!3d37.5616608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9ec16cae566f%3A0xb8aee76edf05b0e!2s2207%20Bridgepointe%20Pkwy%2C%20Foster%20City%2C%20CA%2094404%2C%20EE.%20UU.!5e0!3m2!1ses-419!2smx!4v1668978444771!5m2!1ses-419!2smx" width="1890" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div-->
+            <h2 class="titulh2">Califique su experiencia</h2>
+            <div class="centr centrmob">
+                <button>Buen servicio</button>
+                <button>Pudo ser mejor</button>
+                <button>Servicio deficiente</button>
             </div>
-        <h2 class="titulh2">Califique su experiencia</h2>
-        <div class="centr centrmob">
-            <button>Buen servicio</button>
-            <button>Pudo ser mejor</button>
-            <button>Servicio deficiente</button>
+        </section>
+        <section>
+            <div class="final">
+                <h2 class="titulh2">Terminos y condiciones</h2>
+
+        <div class="container text-center">
+            <div class="row row-cols-4">
+            <div class="col">Información</div>
+            <div class="col">Servicio al Cliente</div>
+            <div class="col">Compras</div>
+            <div class="col">Contactar</div>
+            <div class="col">Acerca de Nosotros</div>
+            <div class="col">Devoluciones</div>
+            <div class="col">Mi Factura</div>
+            <div class="col">Direccion:</div>
+            <div class="col">Aviso de Privacidad</div>
+            <div class="col">Contáctenos</div>
+            <div class="col">Donde esta mi pedido?</div>
+            <div class="col">Telefono: - Correo:</div>
+            <div class="col">Términos y condiciones</div>
+            <div class="col">Sponsors</div>
+            <div class="col">Seguro de Envio</div>
+            <div class="col">Mapa</div>
+            <div class="col">Formas de Pago</div>
+            <div class="col"></div>
+            <div class="col">Pagos a Plazos</div>
+            <div class="col"></div>
+            <div class="col">Politicas de Garantia</div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col">IMAgen</div>
+            </div>
         </div>
-    </section>
-</main>
-<footer>
-    <h2 class="titulh2">Terminos y condiciones</h2>
-    <table>
-        <tr>
-            <td>
-                Sobre Nosotros
-            </td>
-            <td>
-                Conocenos
-            </td>
-            <td>
-                Terminos y condiciones:
-            </td>
-        </tr>
-    </table>
-    <p id="base1">Todos los derechos reservados</p>
-</footer>
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<script src="./scripts/index.js"></script>
+    </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container text-center">
+            <div class="row row-cols-2">
+            <div class="col">© AL-TEK - All Rights Reserved</div>
+            <div class="col">IMAGEN</div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="./scripts/index.js"></script>
 </body>
+
 </html>

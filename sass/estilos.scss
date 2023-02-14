@@ -8,15 +8,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*Generales*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: $tipografiaPrincipal;
 }
-.titulh2{
-    color: #184dc9;
-    text-decoration:underline;
+
+.titulh2 {
+    color:white;
+    text-decoration: underline;
     text-decoration-color: rgb(14, 153, 84);
     margin: 15px;
     display: flex;
@@ -24,73 +25,148 @@
     text-align: center;
     font-size: 35px;
 }
-h3{
+
+h3 {
     color: #184dc9;
     margin: 15px;
     display: flex;
     text-align: start;
 }
-p{
-    color: black;
+
+p {
+    color: white;
     display: inline;
     font-size: 17px;
 }
 
-    /*Index*/
+.textonegro{
+    color: black;
+}
 
-body{
-    background-color: white;
-    header{
-        div{
-            border: solid;
-            border-color: #001FFF;
-            background-color: #245AD6;
-            .ban1{
-                width: 250px;
-                display: block;
-                margin: auto;
-            }
-        }
-        div{
-            .ban2{
-                display:flex;
-                width: 100%;
-                height: 50px;
-            }
-        }
-        .busq{
-            display: flex;
-            justify-content: flex-end;
-        }
-        nav{
-            
-            width: 100%;
-            .nav_item{
-                margin: 15px;
+/*Index*/
+
+body {
+    //background-color: #95b8f6;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    header {
+        background-color:white;
+        div {
+            padding: 0 0 0 0;
+            margin: 0 0 10px 0;
+            justify-content: center;
+            align-content: center;
+            div {
+                margin: 20px 740px 0 0;
                 padding: 0;
-                display: flex;
-                justify-content: space-evenly;
-                flex-wrap: wrap;
-                text-align: center;
-                font-size: 20px;
+                background-color: white;
+                width: 100%;
+                table{
+                    table-layout: fixed;
+                    width: 100%;
+                    tr{
+                        th{
+                            padding-right: 200px;
+                            .LogoAltek {
+                                width: 250px;
+                                display: block;
+                                margin: auto;
+                            }
+                        }
+                        th{
+                            
+                            div{
+                                border: none;
+                                list-style-type: none;
+                                text-align:right;
+                                ul{
+                                    li{
+                                        display: inline;
+                                        align-content:center;
+                                        padding: 20px 0;
+                                        a{
+                                            padding: 0 30px;
+                                            font-size: 20px;
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ul{
+            padding: 30px 0px 0 0;
+            width: 100%;
+            li{
+                margin: 0;
             }
             li{
+                .nav_item {
+                    margin: 15px;
+                    padding: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    text-align: center;
+                    font-size: 20px;
+                }
+                }
+                form{
+                    margin-left: 100px;
+                }
+            li {
                 list-style-type: none;
-                a{
+                a {
                     color: #184dc9;
                 }
             }
         }
     }
-    main{
-        section{
-            .video{
+    main {
+        div{
+            padding: 2px;
+            div{
+                div{
+                    div{/*Buttons*/
+                    }
+                    div{/*Carousel-inner*/
+                        
+                    }
+                    /*Slide*/
+                }
+                div{ /*Carousel2*/
+                    div{ /*Buttons*/
+                        
+                    }
+                    div{/*Carousel-inner*/
+                        
+                        div{
+
+                        }
+                    }
+                    /*Slide*/
+                }
+            }
+            div{
+                    /*Segunda fila*/
+                    div{
+                        padding: 0 0 10px;
+                    }
+                }
+            }
+        }
+
+        section {
+            .video {
                 display: flex;
                 justify-content: center;
             }
         }
-        section{
-            .alert{
+        section {
+            .alert {
                 margin: 15px;
                 padding: 0;
                 border: solid;
@@ -98,20 +174,20 @@ body{
                 display: flex;
                 justify-content: center;
             }
-            li{
+            li {
                 color: #184dc9;
                 font: 20px;
                 margin-top: 5px;
             }
         }
-        section{
-            .imgmostra{
+        section {
+            .imgmostra {
                 display: flex;
                 justify-content: center;
             }
         }
-        section{
-            .alert2{
+        section {
+            .alert2 {
                 margin: 20px;
                 padding: 0;
                 border: solid;
@@ -119,38 +195,53 @@ body{
                 text-align: justify;
             }
         }
-        section{
-            .centr{
+        section {
+            .centr {
                 text-align: center;
                 font-size: 20px;
             }
-            .uno{
+            .uno {
                 @extend .alert;
             }
-            .bien{
+            .bien {
                 @include dbotoncalif (green);
             }
-            .meh{
+            .meh {
                 @include dbotoncalif (yellow);
             }
-            .mal{
+            .mal {
                 @include dbotoncalif (red);
             }
         }
+        section{
+            .final{
+                background-color: gray;
+            }
+            div{
+            }
+        }
+        .formulario{
+            margin: 0 300px;
+        }
     }
-}
+    footer{
+        background-color: white;
+    }
 
-@media only screen and (min-width: 320px) and (max-width: 500px){
-    .map{
-        display:flex;
+
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+    .map {
+        display: flex;
         width: 360px;
     }
-    .paraVideo{
+
+    .paraVideo {
         padding: 0;
         width: 360px;
         height: 360px;
     }
-    .centrmob{
+
+    .centrmob {
         margin-top: 10px;
     }
 }
