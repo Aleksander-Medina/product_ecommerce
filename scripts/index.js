@@ -80,10 +80,10 @@ if (edad>= 18){
 }
 
 const automoviles = [
-    {id:1, nombre: "Mercedes-Benz", motor: "4.0 L V8", color:"Gris", precio:"580000"},
-    {id:2, nombre: "BMW", motor: "3.0 L 6 motor en línea", color:"Rojo", precio:"690000"},
-    {id:3, nombre: "Audi", motor: "2.0 L 4 motor en línea", color:"Azul", precio:"960000"},
-    {id:4, nombre: "Aston Martin", motor: "6.0 L V12", color:"Verde", precio:"794000"},
+    {id:1, marca: "Mercedes-Benz", motor: "4.0 L V8", color:"Gris", stock:"100", precio: 580000},
+    {id:2, marca: "BMW", motor: "3.0 L 6 motor en línea", color:"Rojo", stock:"200", precio: 690000},
+    {id:3, marca: "Audi", motor: "2.0 L 4 motor en línea", color:"Azul", stock:"900.56", precio: 960000},
+    {id:4, marca: "Aston Martin", motor: "6.0 L V12", color:"Verde", stock:"1050", precio: 794000},
 ]
 
 for (let i = 0;i < automoviles.length; i++){
@@ -111,19 +111,19 @@ if(Valorin>=12 || Valorin<=18){
 switch(Valorinn){
     case 1:
         alert("OFERTA: Descuento en Combo dulces")
-        console.log("1");
+        console.log("OFERTA: Descuento en Combo dulces");
     break;
     case 2:
         alert("OFERTA: 2x1 en funciones 3D");
-        console.log("2");
+        console.log("OFERTA: 2x1 en funciones 3D");
     break;
     case 3:
         alert("OFERTA: Descuento en Combo parejas");
-        console.log("3");
+        console.log("OFERTA: Descuento en Combo parejas");
     break;
     case 4:
         alert("OFERTA: Descuento en entradas tradicionales");
-        console.log("4");
+        console.log("OFERTA: Descuento en entradas tradicionales");
     break;
     case 5:
         alert("No hay promoción");
@@ -132,9 +132,35 @@ switch(Valorinn){
 
 
 /*---------------------Actividad 8-------------------------*/
+for(let i=0; i < automoviles.length; i++){
+    console.log("Marcas con su stock: ", automoviles[i].marca, automoviles[i].stock);
+}
+
+const Preciomayor = automoviles.filter(automoviles => automoviles.precio > 200)
+console.log("Los productos con precio mayor a 200 son: ", Preciomayor)
 
 
+const precios = automoviles.map(item => item.precio);
 
+const totalprecio = precios.reduce((total, precios)=> total + precios);
+
+const promediofinal = totalprecio / automoviles.length;
+
+console.log("El promedio del costo de los productos es: ", promediofinal);
+
+
+const ordenAlfa = automoviles.sort ((item1, item2) => {
+    if (item1.marca == item2.marca){
+        return 0
+    }else if(item1.marca < item2.marca){
+        return -1
+    }else{
+            return 1
+        }
+})
+console.log("Prooductos ordenados Alfabeticamente: ", ordenAlfa);
+
+const preciomax = automoviles.map(item => item.precio);
 
 /*---------------------Actividad 9-------------------------*/
 
