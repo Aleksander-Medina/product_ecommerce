@@ -1,3 +1,54 @@
+const agregaralcarritobuttons = document.querySelectorAll(".agregaralcarrito");
+console.log(agregaralcarritobuttons);
+
+agregaralcarritobuttons.forEach((agregaralcarritobtn => {
+    agregaralcarritobtn.addEventListener("click", agregaralcarritoclick);
+    }));
+
+    const shoppingcartitemscontainer = document.querySelector(".shoppingcartitemscontainer");
+
+    function agregaralcarritoclick(event){
+        const button = event.target;
+        const item = button.closest(".item");
+        
+        const itemTitle = item.querySelector(".item-title").textContent;
+        const itemPrice = item.querySelector(".item-price").textContent;
+        const itemImage = item.querySelector(".item-image").src;
+        
+        carritodecompras(itemTitle,itemPrice,itemImage);
+    }
+
+    function carritodecompras(itemTitle,itemPrice,itemImage){
+        const shoppingcartRow = document.createElement("div");
+        const shoppingcarcontent = `
+        <div class="row shoppingcartItem">
+            <div class="col-6">
+                <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                    <img src=${itemImage} class="card-img-top" alt="">
+                        <h7 class="shopping-cart-item-title shoppingcartitemscontainer text-truncate ml-3 mb-0">${itemTitle}</h7>
+                </div>
+                <div class="col-2">
+                    <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                        <p class="item-price mb-0 shopping-cart-item-price">${itemPrice}</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
+                        <input class="shopping-cart-quantity-input shopping-cart-Quantity" type="numbre" value="1">
+                        <button class="btn btn-danger burronDelete" type="button">X</button>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+        shoppingcartRow.innerHTML = shoppingcarcontent
+        shoppingcartitemscontainer.append(shoppingcartRow);
+    }
+
+//function agregaralcarritoclick{
+//    const a = event.target;
+//    console.log(agregaralcarritoclick, button);
+//}
+
 /*/let nombre= "Bienvenido";
 let visita = 0;
 let existe= false;
@@ -71,7 +122,7 @@ console.log(Arreglo[3][0]);*/
 
 
 /*---------------------Actividad 7-------------------------*/
-let edad = 19;
+/*let edad = 19;
 
 if (edad>= 18){
     console.log("Valido")
@@ -132,7 +183,7 @@ switch(Valorinn){
 
 
 /*---------------------Actividad 8-------------------------*/
-for(let i=0; i < automoviles.length; i++){
+/*for(let i=0; i < automoviles.length; i++){
     console.log("Marcas con su stock: ", automoviles[i].marca, automoviles[i].stock);
 }
 

@@ -19,11 +19,31 @@
   font-size: 35px;
 }
 
+h1 {
+  color: white;
+}
+
 h3 {
   color: #184dc9;
   margin: 15px;
   display: flex;
   text-align: start;
+}
+
+h5 {
+  color: white;
+  text-align: center;
+}
+
+h6 {
+  color: white;
+  font-size: 17px;
+}
+
+.uniq {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 p {
@@ -32,8 +52,36 @@ p {
   font-size: 17px;
 }
 
+.pre {
+  color: red;
+  font-size: 20px;
+}
+
+p1 {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .textonegro {
   color: black;
+}
+
+.shopping-cart-header {
+  color: white;
+  font-size: 18px;
+}
+
+.h-100 {
+  width: 10%;
+}
+
+.shoppingcartItem {
+  border: solid;
+}
+
+.espacio {
+  margin: 50px;
 }
 
 /*Index*/
@@ -184,6 +232,9 @@ body section .final {
 }
 body .formulario {
   margin: 0 300px;
+}
+body .formulario div .letraform {
+  color: white;
 }
 
 footer {

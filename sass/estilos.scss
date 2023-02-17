@@ -25,7 +25,9 @@
     text-align: center;
     font-size: 35px;
 }
-
+h1{
+    color: white;
+}
 h3 {
     color: #184dc9;
     margin: 15px;
@@ -33,14 +35,53 @@ h3 {
     text-align: start;
 }
 
+h5 {
+    color: white;
+    text-align: center;
+}
+h6 {
+    color: white;
+    font-size: 17px;
+}
+
+.uniq{
+position: fixed;
+bottom: 0;
+width: 100%;
+}
 p {
     color: white;
     display: inline;
     font-size: 17px;
 }
+.pre{
+    color: red;
+    font-size: 20px;
+}
+p1{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
 
 .textonegro{
     color: black;
+}
+
+.shopping-cart-header{
+    color: white;
+    font-size: 18px;
+}
+.h-100{
+    width: 10%;
+}
+
+.shoppingcartItem{
+    border: solid;
+}
+
+.espacio{
+    margin: 50px;
 }
 
 /*Index*/
@@ -85,6 +126,7 @@ body {
                                         display: inline;
                                         align-content:center;
                                         padding: 20px 0;
+                                        
                                         a{
                                             padding: 0 30px;
                                             font-size: 20px;
@@ -117,6 +159,7 @@ body {
                 form{
                     margin-left: 100px;
                 }
+                
             li {
                 list-style-type: none;
                 a {
@@ -222,6 +265,11 @@ body {
         }
         .formulario{
             margin: 0 300px;
+            div{
+                .letraform{
+                    color:white;
+                }
+            }
         }
     }
     footer{
