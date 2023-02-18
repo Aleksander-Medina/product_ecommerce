@@ -1,3 +1,181 @@
+const Clickbutton = document.querySelectorAll('.container')
+const tbody = document.querySelector('.tbody')
+let carrito = []
+
+Clickbutton.forEach(btn => {
+    btn.addEventListener('click', addToCarritoItem)
+})
+
+
+function addToCarritoItem(e){
+    const button = e.target;
+    const item = button.closest('.item');
+
+    const itemid = item.querySelector('.item-id').dataset.id;
+    const itemTitle = item.querySelector('.item-title').textContent;
+    const itemPrice = item.querySelector('.item-price').textContent;
+    const itemImg = item.querySelector('.item-image').src;
+    
+    const newItem = {
+    id:itemid,
+    title: itemTitle,
+    precio: itemPrice,
+    img: itemImg,
+    cantidad: 1
+}
+addItemCarrito(newItem);    
+}
+
+function addItemCarrito(newItem){
+
+const alert = document.querySelector('.alert')
+
+setTimeout( function(){
+    alert.classList.add('hide')
+}, 2000)
+    alert.classList.remove('hide')
+
+const InputElemnto = tbody.getElementsByClassName('input__elemento')
+for(let i =0; i < carrito.length ; i++){
+    if(carrito[i].title.trim() === newItem.title.trim()){
+        carrito[i].cantidad ++;
+        const inputValue = InputElemnto[i]
+        inputValue.value++;
+        CarritoTotal()
+        return null;
+    }
+}
+
+carrito.push(newItem)
+
+renderCarrito()
+}
+
+
+function renderCarrito(){
+    tbody.innerHTML = ''
+    carrito.map(item => {
+    const tr = document.createElement('tr')
+    tr.classList.add('ItemCarrito')
+    const Content = `
+    
+    <th scope="row">1</th>
+            <td class="table__productos">
+                <img src=${item.img}  alt="">
+                <h8 class="title">${item.title}</h8>
+            </td>
+            <td class="table__price"><p>${item.precio}</p></td>
+            <td class="table__cantidad">
+                <input class="input__elemento" type="number" min="1" value=${item.cantidad}>
+                <button class="delete btn btn-danger">X</button>
+            </td>
+    
+    `
+    tr.innerHTML = Content;
+    tbody.append(tr)
+
+    tr.querySelector(".delete").addEventListener('click', removeItemCarrito)
+    tr.querySelector(".input__elemento").addEventListener('change', sumaCantidad)
+})
+CarritoTotal()
+}
+
+function CarritoTotal(){
+    let Total = 0;
+    const itemCartTotal = document.querySelector('.itemCartTotal')
+    carrito.forEach((item) => {
+    const precio = Number(item.precio.replace("$", ''))
+    Total = Total + precio*item.cantidad
+})
+
+itemCartTotal.innerHTML = `Total $${Total}`
+addLocalStorage()
+}
+
+function removeItemCarrito(e){
+    const buttonDelete = e.target
+    const tr = buttonDelete.closest(".ItemCarrito")
+    const title = tr.querySelector('.title').textContent;
+    for(let i=0; i<carrito.length ; i++){
+
+    if(carrito[i].title.trim() === title.trim()){
+    carrito.splice(i, 1)
+    }
+}
+
+const alert = document.querySelector('.remove')
+
+setTimeout( function(){
+    alert.classList.add('remove')
+}, 2000)
+    alert.classList.remove('remove')
+
+tr.remove()
+CarritoTotal()
+}
+
+function sumaCantidad(e){
+    const sumaInput  = e.target
+    const tr = sumaInput.closest(".ItemCarrito")
+    const title = tr.querySelector('.title').textContent;
+    carrito.forEach(item => {
+    if(item.title.trim() === title){
+        sumaInput.value < 1 ?  (sumaInput.value = 1) : sumaInput.value;
+        item.cantidad = sumaInput.value;
+        CarritoTotal()
+    }
+})
+}
+
+function addLocalStorage(){
+localStorage.setItem('carrito', JSON.stringify(carrito))
+}
+
+window.onload = function(){
+const storage = JSON.parse(localStorage.getItem('carrito'));
+if(storage){
+    carrito = storage;
+    renderCarrito()
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*const cards = document.getElementById('cards')
+const itemisu = document.getElementById('itemisu')
+const fbase = document.getElementById('footer')
+const templateCard = document.getElementById('template-card').content
+const templateFooter = document.getElementById('template-footer').content
+const fondocarrito = document.getElementById('template-carrito').content
+const fragment = document.createDocumentFragment()
+
+
+// El evento DOMContentLoaded es disparado cuando el documento HTML ha sido completamente cargado y parseado
+document.addEventListener('DOMContentLoaded', e => { fetchData() });
+cards.addEventListener('click', e => { addCarrito(e) });
+items.addEventListener('click', e => { btnAumentarDisminuir(e) })
+
+let carrito = {}
+
 const agregaralcarritobuttons = document.querySelectorAll(".agregaralcarrito");
 console.log(agregaralcarritobuttons);
 
@@ -11,45 +189,70 @@ agregaralcarritobuttons.forEach((agregaralcarritobtn => {
         const button = event.target;
         const item = button.closest(".item");
         
+        const itemid = item.querySelector(".item-id").dataset.id;
         const itemTitle = item.querySelector(".item-title").textContent;
         const itemPrice = item.querySelector(".item-price").textContent;
         const itemImage = item.querySelector(".item-image").src;
-        
-        carritodecompras(itemTitle,itemPrice,itemImage);
+
+        salidacarrito(itemid,itemTitle,itemPrice,itemImage);
     }
 
-    function carritodecompras(itemTitle,itemPrice,itemImage){
-        const shoppingcartRow = document.createElement("div");
-        const shoppingcarcontent = `
-        <div class="row shoppingcartItem">
-            <div class="col-6">
-                <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
-                    <img src=${itemImage} class="card-img-top" alt="">
-                        <h7 class="shopping-cart-item-title shoppingcartitemscontainer text-truncate ml-3 mb-0">${itemTitle}</h7>
-                </div>
-                <div class="col-2">
-                    <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
-                        <p class="item-price mb-0 shopping-cart-item-price">${itemPrice}</p>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
-                        <input class="shopping-cart-quantity-input shopping-cart-Quantity" type="numbre" value="1">
-                        <button class="btn btn-danger burronDelete" type="button">X</button>
-                    </div>
-                </div>
-            </div>
-        </div>`;
-        shoppingcartRow.innerHTML = shoppingcarcontent
-        shoppingcartitemscontainer.append(shoppingcartRow);
+    const salidacarrito = (itemid,itemTitle,itemPrice,itemImage) => {
+        const producto = {
+            id:itemid,
+            nombre:itemTitle,
+            precio:itemPrice,
+            imagen:itemImage,
+            cantidad: 1
+        }
+        carrito.push(producto)
+        renderCarrito
+    }
+    console.log(carrito)
+    
+
+        /*if(carrito.hasOwnProperty(producto.id)){
+            producto.cantidad = carrito[producto.id].cantidad + 1;
+        }
+
+        carrito[producto.id] = {...producto}
+        llenarcarrito()
     }
 
-//function agregaralcarritoclick{
-//    const a = event.target;
-//    console.log(agregaralcarritoclick, button);
-//}
+const llenarcarrito = () => {
+    itemisu.innerHTML = ''
+    Object.values(carrito).forEach(producto =>{
+        fondocarrito.querySelector("th").textContent=producto.id
+        fondocarrito.querySelectorAll("td")[0].textContent=producto.nombre
+        fondocarrito.querySelectorAll("td")[1].textContent=producto.cantidad
+        fondocarrito.querySelector(".btn-info").dataset.id=producto.id
+        fondocarrito.querySelector(".btn-danger").dataset.id=producto.id
+        fondocarrito.querySelector("span").textContent=producto.cantidad * producto.precio
+        const clone = fondocarrito.cloneNode(true)
+        fragment.appendChild(clone)
+    })
+    itemisu.appendChild(fragment)
+    
+    llenaritems()
+}
 
-/*/let nombre= "Bienvenido";
+const llenaritems = () => {
+    fbase.innerHTML = ""
+    if(Object.keys(carrito).length === 0){
+        fbase.innerHTML = `
+        <th class="shopping-cart-header" scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+        `
+    }
+}
+
+
+
+
+
+
+
+/*-----------------TAREAS!!!!------------------
+let nombre= "Bienvenido";
 let visita = 0;
 let existe= false;
 let duda= undefined;

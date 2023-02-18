@@ -1,5 +1,45 @@
-/* font-family: 'Montserrat', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.body {
+  background-color: none;
+}
+
+.carrito {
+  min-height: 10vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.table__productos {
+  display: flex;
+}
+
+.table__productos > img {
+  width: 9rem;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+
+.table__cantidad > input {
+  width: 40px;
+  border: none;
+  outline: 0;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.alert, body section .uno {
+  z-index: 100;
+}
+
+.hide {
+  display: none;
+}
+
+/* font-family: 'Montserrat', sans-serif; */
 /*Generales*/
 * {
   margin: 0;
@@ -69,7 +109,7 @@ p1 {
 
 .shopping-cart-header {
   color: white;
-  font-size: 18px;
+  font-size: 30px;
 }
 
 .h-100 {
@@ -82,6 +122,11 @@ p1 {
 
 .espacio {
   margin: 50px;
+}
+
+.map {
+  width: 400px;
+  height: 200px;
 }
 
 /*Index*/
@@ -242,10 +287,6 @@ footer {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 500px) {
-  .map {
-    display: flex;
-    width: 360px;
-  }
   .paraVideo {
     padding: 0;
     width: 360px;
